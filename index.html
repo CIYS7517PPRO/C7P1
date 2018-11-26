@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="http://35.185.87.233/static/stylesheets/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+</head>
+<body>
+    Please enter a number: <input id = "numberInput" type = "text">
+    <table style = "display: none" id = "multiplicationTable">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </table>
+    <script>
+        var input = document.getElementById("numberInput");
+        var table = document.getElementById("multiplicationTable");
+        
+        input.addEventListener('change', () => {
+            table.style.display = block;
+            for (var i = 1; i <= 12; i++) {
+                var currentRow = table.childNodes[i-1];
+                currentRow.childNodes[0].innerHTML = `${i}x${input.value}`;
+                currentRow.childNodes[1].innerHTML = `${i*input.value}`;
+            }
+        })
+    </script>
+</body>
+</html>
