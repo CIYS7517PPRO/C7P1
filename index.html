@@ -73,11 +73,14 @@
         var table = document.getElementById("multiplicationTable");
         
         input.addEventListener('change', () => {
-            table.style.display = block;
+            table.style.display = "block";
             for (var i = 1; i <= 12; i++) {
-                var currentRow = table.childNodes[i-1];
-                currentRow.childNodes[0].innerHTML = `${i}x${input.value}`;
-                currentRow.childNodes[1].innerHTML = `${i*input.value}`;
+                var currentRow = table.childNodes[1].childNodes[2*i-2];
+		console.log(currentRow)
+                currentRow.childNodes[1].innerHTML = `${input.value}x${i}`;
+		currentRow.childNodes[1].style.textAlign = "right";
+                currentRow.childNodes[3].innerHTML = `${i*input.value}`;
+		currentRow.childNodes[1].style.fontWeight = 700;
             }
         })
     </script>
